@@ -23,8 +23,10 @@ requirements:
     - pytest-runner
   run:
     - python
-    - django >=1.8
-    - six
+    - django >=1.11
+    - django-environ
+    - bumpversion
+    - mock
 
 about:
   home: https://github.com/django-guardian/django-guardian
