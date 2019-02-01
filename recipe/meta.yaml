@@ -1,6 +1,6 @@
 {% set name = "django-guardian" %}
-{% set version = "1.4.9" %}
-{% set sha256 = "c3c0ab257c9d94ce154b9ee32994e3cff8b350c384040705514e14a9fb7c8191" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "9e144bbdfa67f523dc6f70768653a19c0aac29394f947a80dcb8eb7900840637" %}
 
 package:
   name: {{ name|lower }}
@@ -23,8 +23,10 @@ requirements:
     - pytest-runner
   run:
     - python
-    - django >=1.8
-    - six
+    - django >=1.11
+    - django-environ
+    - bumpversion
+    - mock
 
 about:
   home: https://github.com/django-guardian/django-guardian
