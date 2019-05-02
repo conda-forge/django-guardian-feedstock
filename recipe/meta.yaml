@@ -1,6 +1,6 @@
 {% set name = "django-guardian" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "9e144bbdfa67f523dc6f70768653a19c0aac29394f947a80dcb8eb7900840637" %}
+{% set version = "1.5.1" %}
+{% set sha256 = "60a4932e322b4474ab76400f3f542ecdf9bee069dbed0ce0c7af55559ec83d3a" %}
 
 package:
   name: {{ name|lower }}
