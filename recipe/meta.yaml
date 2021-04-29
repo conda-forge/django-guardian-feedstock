@@ -24,13 +24,15 @@ requirements:
     - python >=3.5
 
 test:
-  imports:
-    - guardian
-    - guardian.conf
   commands:
-    - pip check
+    - pytest --pyargs guardian -c pytest.ini
   requires:
-    - pip
+    - django-environ
+    - mock
+    - pytest
+    - pytest-django
+  source_files:
+    - pytest.ini
 
 about:
   home: http://github.com/django-guardian/django-guardian
