@@ -116,4 +116,6 @@ Feedstock Maintainers
 =====================
 
 * [@abraha2d](https://github.com/abraha2d/)
+* [@cshaley](https://github.com/cshaley/)
+* [@sannykr](https://github.com/sannykr/)
 
