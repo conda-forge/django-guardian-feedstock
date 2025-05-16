@@ -1,43 +1,45 @@
 {% set name = "django-guardian" %}
-{% set version = "2.4.0" %}
-
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-guardian-{{ version }}.tar.gz
-  sha256: c58a68ae76922d33e6bdc0e69af1892097838de56e93e78a8361090bcd9f89a0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 0c79d55c4af2cfc14fbd19539846a1ebfed2a38198b7697e0f5177b7f654e1cd
 
 build:
-  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - pip
     - python {{ python_min }}
+    - setuptools >=61
+    - wheel
+    - pip
   run:
-    - django >=2.2
     - python >={{ python_min }}
+    - django >=3.2
 
 test:
+  imports:
+    - guardian
   commands:
-    - pytest --pyargs guardian -c pytest.ini
+    - pip check
+    - DJANGO_SETTINGS_MODULE=guardian.testapp.testsettings pytest --pyargs guardian
   requires:
-    - django-environ
-    - mock
-    - pytest
-    - pytest-django
+    - django-environ >=0.12.0
+    - pip
+    - pytest >=8.3.4
+    - pytest-django >=4.9.0
     - python {{ python_min }}
-  source_files:
-    - pytest.ini
 
 about:
   home: http://github.com/django-guardian/django-guardian
-  summary: Implementation of per object permissions for Django.
+  summary: Per object permissions for Django
   license: BSD-3-Clause
   license_file: LICENSE
 
