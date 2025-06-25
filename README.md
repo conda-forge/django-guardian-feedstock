@@ -7,7 +7,7 @@ Home: http://github.com/django-guardian/django-guardian
 
 Package license: BSD-3-Clause
 
-Summary: Implementation of per object permissions for Django.
+Summary: Per object permissions for Django
 
 Current build status
 ====================
