@@ -1,5 +1,5 @@
 {% set name = "django-guardian" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0c79d55c4af2cfc14fbd19539846a1ebfed2a38198b7697e0f5177b7f654e1cd
+  sha256: 4e59eab4d836da5a027cf0c176d14bc2a4e22cbbdf753159a03946c08c8a196d
 
 build:
   noarch: python
@@ -21,6 +21,8 @@ requirements:
     - wheel
     - pip
   run:
+    - django-environ
+    - guardian
     - python >={{ python_min }}
     - django >=3.2
 
