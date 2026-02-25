@@ -1,5 +1,5 @@
 {% set name = "django-guardian" %}
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9e18ecd2e211b665972690c2d03d27bce0ea4932b5efac24a4bb9d526950a69e
+  sha256: abf1487399212cffdce7b3c909182a26fbe7e89746007299a8cab99f3d5ff009
 
 build:
   noarch: python
