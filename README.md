@@ -3,11 +3,13 @@ About django-guardian-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-guardian-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/django-guardian/django-guardian
+Home: https://github.com/django-guardian/django-guardian
 
-Package license: BSD-3-Clause
+Package license: BSD-2-Clause
 
 Summary: Per object permissions for Django
+
+Documentation: https://django-guardian.readthedocs.io/
 
 Current build status
 ====================

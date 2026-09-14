@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,8 +22,6 @@ requirements:
     - pip
   run:
     - typing_extensions >=4.12.0
-    - django-environ
-    - guardian
     - python >={{ python_min }}
     - django >=3.2
 
@@ -41,9 +39,10 @@ test:
     - python {{ python_min }}
 
 about:
-  home: http://github.com/django-guardian/django-guardian
+  home: https://github.com/django-guardian/django-guardian
   summary: Per object permissions for Django
-  license: BSD-3-Clause
+  doc_url: https://django-guardian.readthedocs.io/
+  license: BSD-2-Clause
   license_file: LICENSE
 
 extra:
